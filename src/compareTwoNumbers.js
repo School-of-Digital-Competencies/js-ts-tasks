@@ -13,9 +13,8 @@ module.exports.compareTwoNumbers = function compareTwoNumbers(firstNumber, secon
   {
     return '>';
   }
-  else if (firstNumber < secondNumber)
+  else
   {
     return '<';
   }
-  throw new Error('Not implemented');
 };
