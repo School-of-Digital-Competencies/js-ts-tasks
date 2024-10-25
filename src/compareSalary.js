@@ -14,9 +14,8 @@ module.exports.compareSalary = function compareSalary(firstSalary, secondSalary,
   {
     return secondSalary;
   }
-  else if (thirdSalary > firstSalary && thirdSalary >= secondSalary)
+  else
   {
     return thirdSalary;
   }
-  throw new Error('Not implemented');
 };
