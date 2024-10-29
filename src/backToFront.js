@@ -5,6 +5,9 @@
  * @returns {string}
  */
 module.exports.backToFront = function backToFront(str, symbolsCount) {
-  let symbolsToCopy = str.slice(0, symbolsCount);
-  return `${symbolsToCopy}${str}${symbolsToCopy}`
+  if (symbolsCount > str.length) {
+    return str;
+  }
+  let symbolsToCopy = str.slice(str.length - symbolsCount, str.length);
+  return `${symbolsToCopy}${str}${symbolsToCopy}`;
 };

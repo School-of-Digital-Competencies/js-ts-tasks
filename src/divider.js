@@ -6,5 +6,5 @@
  * @returns {number}
  */
 module.exports.divider = function divider(n, k) {
-  return `${Math.round(n / k)} ${n % k}`
+  return `${Math.floor(n / k)} ${n % k}`;
 };

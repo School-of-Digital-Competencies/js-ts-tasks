@@ -4,5 +4,5 @@
  * @returns {number}
  */
 module.exports.evalExpr = function evalExpr(k) {
-  return (4 * (2 * k - 1));
+  return 4 * (2 * k - 1);
 };

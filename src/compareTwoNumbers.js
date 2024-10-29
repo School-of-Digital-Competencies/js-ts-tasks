@@ -5,16 +5,11 @@
  * @returns {string}
  */
 module.exports.compareTwoNumbers = function compareTwoNumbers(firstNumber, secondNumber) {
-  if (firstNumber === secondNumber)
-  {
+  if (firstNumber === secondNumber) {
     return '=';
-  }
-  else if (firstNumber > secondNumber)
-  {
+  } else if (firstNumber > secondNumber) {
     return '>';
-  }
-  else
-  {
+  } else {
     return '<';
   }
 };

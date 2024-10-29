@@ -5,9 +5,9 @@
  */
 module.exports.digitsSum = function digitsSum(n) {
   let sum = 0;
-  for (let i = 0; i < n; i++)
-  {
-    sum += i;
+  let stringN = Math.abs(n).toString();
+  for (let i = 0; i < stringN.length; i++) {
+    sum += parseInt(stringN[i]);
   }
   return sum;
 };
