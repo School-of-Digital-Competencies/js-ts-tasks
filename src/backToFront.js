@@ -5,5 +5,7 @@
  * @returns {string}
  */
 module.exports.backToFront = function backToFront(str, symbolsCount) {
-  throw new Error('Not implemented');
+  const result = `${str[-symbolsCount]} ${str} ${str[-symbolsCount]}`;
+
+  return result;
 };
