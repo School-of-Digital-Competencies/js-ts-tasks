@@ -5,5 +5,7 @@
  * @returns {number}
  */
 module.exports.sumTwoNumbers = function sumTwoNumbers(firstNumber, secondNumber) {
-  return firstNumber + secondNumber;
+  firstNumber = firstNumber.toString().replaceAll(' ', '');
+  secondNumber = secondNumber.toString().replaceAll(' ', '');
+  return parseFloat(firstNumber) + parseFloat(secondNumber);
 };
