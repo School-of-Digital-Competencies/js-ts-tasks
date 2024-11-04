@@ -5,7 +5,11 @@
  * @returns {string}
  */
 module.exports.backToFront = function backToFront(str, symbolsCount) {
-  const result = `${str[-symbolsCount]} ${str} ${str[-symbolsCount]}`;
-
-  return result;
+  let substring;
+  if (symbolsCount < str.length + 1) {
+    substring = str.slice(-symbolsCount);
+  } else {
+    substring = '';
+  }
+  return substring + str + substring;
 };
