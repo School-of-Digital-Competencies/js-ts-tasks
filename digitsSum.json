@@ -1,0 +1,38 @@
+[
+  {
+    "fnArguments": [1],
+    "expected": 1
+  },
+  {
+    "fnArguments": [43],
+    "expected": 7
+  },
+  {
+    "fnArguments": [-2],
+    "expected": 2
+  },
+  {
+    "fnArguments": [123],
+    "expected": 6
+  },
+  {
+    "fnArguments": [1000009],
+    "expected": 10
+  },
+  {
+    "fnArguments": [6943920],
+    "expected": 33
+  },
+  {
+    "fnArguments": [-2353411111],
+    "expected": 22
+  },
+  {
+    "fnArguments": [5230921],
+    "expected": 22
+  },
+  {
+    "fnArguments": [0],
+    "expected": 0
+  }
+]

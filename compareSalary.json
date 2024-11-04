@@ -1,0 +1,26 @@
+[
+  {
+    "fnArguments": [100, 300, 500],
+    "expected": 400
+  },
+  {
+    "fnArguments": [40000, 40000, 40000],
+    "expected": 0
+  },
+  {
+    "fnArguments": [2, 1, 3],
+    "expected": 2
+  },
+  {
+    "fnArguments": [4302, 5403, 54],
+    "expected": 5349
+  },
+  {
+    "fnArguments": [55.111113, 664.12, 55.111112],
+    "expected": 609.008888
+  },
+  {
+    "fnArguments": [6589330, 53498592839, 458934852],
+    "expected": 53492003509
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "fnArguments": [4, 2],
+    "expected": "2 0"
+  },
+  {
+    "fnArguments": [8, 3],
+    "expected": "2 2"
+  },
+  {
+    "fnArguments": [21, 5],
+    "expected": "4 1"
+  },
+  {
+    "fnArguments": [64, 8],
+    "expected": "8 0"
+  },
+  {
+    "fnArguments": [12, 11],
+    "expected": "1 1"
+  },
+  {
+    "fnArguments": [9, 4],
+    "expected": "2 1"
+  }
+]

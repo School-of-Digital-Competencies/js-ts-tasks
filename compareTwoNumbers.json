@@ -1,0 +1,22 @@
+[
+  {
+    "fnArguments": [4, 1],
+    "expected": ">"
+  },
+  {
+    "fnArguments": [-12, -12],
+    "expected": "="
+  },
+  {
+    "fnArguments": [-1, -1],
+    "expected": "="
+  },
+  {
+    "fnArguments": [-45353, 1],
+    "expected": "<"
+  },
+  {
+    "fnArguments": [0, 0],
+    "expected": "="
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "fnArguments": ["hello", 1],
+    "expected": "ohelloo"
+  },
+  {
+    "fnArguments": ["abc", 3],
+    "expected": "abcabcabc"
+  },
+  {
+    "fnArguments": ["world", 20],
+    "expected": "world"
+  },
+  {
+    "fnArguments": ["bill", 2],
+    "expected": "llbillll"
+  },
+  {
+    "fnArguments": ["one!", 1],
+    "expected": "!one!!"
+  },
+  {
+    "fnArguments": ["smallString", 402],
+    "expected": "smallString"
+  },
+  {
+    "fnArguments": ["2093", 1],
+    "expected": "320933"
+  },
+  {
+    "fnArguments": [" ", 1],
+    "expected": "   "
+  },
+  {
+    "fnArguments": ["'", 1],
+    "expected": "'''"
+  },
+  {
+    "fnArguments": ["", 0],
+    "expected": ""
+  }
+]
