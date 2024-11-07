@@ -4,5 +4,10 @@
  * @returns {number}
  */
 module.exports.digitsSum = function digitsSum(n) {
-  throw new Error('Not implemented'); // remove this line
+  if (Math.abs(n) < 10) {
+    return Math.abs(n);
+  }
+  const lastDigit = Math.abs(n % 10);
+  const remainingDigits = Math.floor(Math.abs(n) / 10);
+  return lastDigit + digitsSum(remainingDigits);
 };
