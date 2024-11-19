@@ -4,18 +4,13 @@
  * @param {number} symbolsCount
  * @returns {string}
  */
-module.exports.backToFront = function backToFront(str, symbolsCount) {
-  
-  if (symbolsCount > str.length) {
-    symbolsCount = str.length;
+module.exports.copySymbolsToFrontAndBack = function copySymbolsToFrontAndBack(str, symbolsCount) {
+  if (str.length === 0 || symbolsCount === 0) {
+    return str;
   }
+  if (symbolsCount >= str.length) {
+    return str;}
 
-  const frontSymbols = str.slice(0, symbolsCount);
-  const backSymbols = str.slice(-symbolsCount);
-
-   
-    return BackSymbol + str + frontSymbolsr;
-}
- 
-
- 
+  const symbols = str.slice(-symbolsCount);  
+  return symbols + str + symbols;  
+};
