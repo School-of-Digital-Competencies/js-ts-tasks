@@ -4,5 +4,16 @@
  * @returns {function}
  */
 module.exports.formatAddress = function formatAddress() {
-  throw new Error('Not implemented'); // remove me and write a solution
+  return function (address) {
+    const {
+      street = '',
+      house = '',
+      apartment = '',
+      city = '',
+      postalCode = '',
+      country = ''
+    } = address;
+
+    return `${street}, ${house}, ${apartment}, ${city}, ${postalCode}, ${country}`.replace(/, , /g, ', ').replace(/, $/, '');
+  };
 };
