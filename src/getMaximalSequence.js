@@ -4,5 +4,18 @@
  * @returns {Object}
  */
 module.exports.getMaximalSequence = function getMaximalSequence(arr) {
-  throw new Error('Not implemented'); // remove me and write a solution
+    let maxSequence = []; 
+    let currentSequence = [arr[0]];
+    for (let i = 1; i < arr.length; i++) {
+    if (arr[i] === arr[i - 1]) {
+    currentSequence.push(arr[i]);
+    } else {
+      if (currentSequence.length > maxSequence.length) {
+      maxSequence = currentSequence;
+      }
+      currentSequence = [arr[i]];
+      }
+    }
+    return currentSequence.length > maxSequence.length ? currentSequence : maxSequence;
 };
+

@@ -5,5 +5,13 @@
  * @returns {Object}
  */
 module.exports.removeItems = function removeItems(arr, value) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  // метод fillter перебирает все эдеиенты массива arr
+  // метод JSON.stringify преоброзует объект или массив в строку и сравнивает 
+  return arr.filter(item => JSON.stringify(item) !== JSON.stringify(value));
 };
+  // тут честно решение подсмотрел
+
+
+
+
+

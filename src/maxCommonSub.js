@@ -9,5 +9,16 @@
  * @returns {number}
  */
 module.exports.maxCommonSub = function maxCommonSub(str1, str2) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  let maxSub = ''; // Переменная для хранения максимальной подстроки
+
+  for (let i = 0; i < str1.length; i++) {
+    for (let j = i + 1; j <= str1.length; j++) {
+      const substring = str1.slice(i, j); // Получаем подстроку из str1
+      if (str2.includes(substring) && substring.length > maxSub.length) {
+        maxSub = substring; // Если подстрока есть в str2 и она длиннее maxSub, обновляем maxSub
+      }
+    }
+  }
+
+  return maxSub;
 };
