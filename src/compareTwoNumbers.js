@@ -5,18 +5,16 @@
  * @returns {string}
  */
 module.exports.compareTwoNumbers = function compareTwoNumbers(firstNumber, secondNumber) {
-  // Check if the first number is greater than the second number
   if (firstNumber > secondNumber) {
-    return '>'; // Return ">" if true
+    return '>';
   }
-
-  // Check if the first number is less than the second number
   if (firstNumber < secondNumber) {
-    return '<'; // Return "<" if true
+    return '<';
   }
-
-  // Check if the numbers are equal
   if (firstNumber === secondNumber) {
-    return '='; // Return "=" if true
+    return '='; 
   }
+  return ''; // на защите был вопрос, что вернет функция если ввести не коррктные данные. 
+  // ответить не смог и был комментарий, что не разобрался с if пользовался помощником.
+  // добавил return '' теперь при вводе не корректных значений выводит пустую строку 
 };
