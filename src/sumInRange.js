@@ -5,5 +5,18 @@
  * @returns {number}
  */
 module.exports.sumInRange = function sumInRange(start, end) {
-  throw new Error('Not implemented');
+  // самостоятельно не смог написать чтобы все тест были пройдены. Подсмотрел решение на защите
+ let startNum = Number(start); 
+ let endNum = Number(end); 
+
+ if (startNum > endNum) {
+   [startNum, endNum] = [endNum, startNum]; 
+ }
+
+ let sum = 0;
+
+ for (let i = startNum; i <= endNum; i++) {
+   sum += i; 
+ }
+ return sum;
 };

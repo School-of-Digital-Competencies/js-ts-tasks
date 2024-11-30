@@ -6,5 +6,7 @@
  * @returns {number}
  */
 module.exports.divider = function divider(n, k) {
-  throw new Error('Not implemented');
+  const wholePart = Math.floor(n / k); // Math.floor помогает найти целую часть числа
+    const remainder = n % k; // находит остаток
+    return `${wholePart} ${remainder}`; 
 };

@@ -5,5 +5,16 @@
  * @returns {string}
  */
 module.exports.compareTwoNumbers = function compareTwoNumbers(firstNumber, secondNumber) {
-  throw new Error('Not implemented');
+  if (firstNumber > secondNumber) {
+    return '>';
+  }
+  if (firstNumber < secondNumber) {
+    return '<';
+  }
+  if (firstNumber === secondNumber) {
+    return '='; 
+  }
+  return ''; // на защите был вопрос, что вернет функция если ввести не коррктные данные. 
+  // ответить не смог и был комментарий, что не разобрался с if пользовался помощником.
+  // добавил return '' теперь при вводе не корректных значений выводит пустую строку 
 };
