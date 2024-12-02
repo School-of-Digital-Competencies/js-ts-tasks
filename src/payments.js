@@ -23,5 +23,27 @@
  * @returns {function}
  */
 module.exports.payments = function payments(TestUtils) {
-  throw new Error('Not implemented'); // remove this line and create your solution
+  return function income(credit, debet) {
+    return TestUtils.sumAllObjectProperties.apply(credit) - TestUtils.sumAllObjectProperties.apply(debet);
+  };
 };
+//   return function (income, debts) {
+// // const sum = income.reduce(function(a, b, c) { return a + b + c; }, 0);
+// // const sum2 = debts.reduce(function(a, b) { return a + b; }, 0);
+// return reduce(TestUtils.sumAllObjectProperties(income)) - reduce(TestUtils.sumAllObjectProperties(debts))
+//   };
+// };
+//  let a = income[0] + income[1] + income[2];
+//  let v = debts[0] + debts[1];
+//  return a - v;
+// };
+
+//return sumAllObjectProperties(payments)
+// Возвращаем функцию, которая точно вычисляет финансовый баланс
+// return function (income, debts) {
+
+//   const a = TestUtils.sumAllObjectProperties(income);
+//   const b = TestUtils.sumAllObjectProperties(debts);
+//   return a-b;
+
+// };
