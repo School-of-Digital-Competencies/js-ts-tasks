@@ -9,5 +9,8 @@
  * @returns {function}
  */
 module.exports.formatAddressWithOrder = function formatAddressWithOrder(order) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  return function(address) {
+    const result = order.map(field => address[field]).filter(Boolean).join(', ');
+    return result;
+  };
 };
