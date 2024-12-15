@@ -8,5 +8,11 @@
  * @returns {Array<number>}
  */
 module.exports.replacement = function replacement(arr) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  return arr.map(num => {
+    const numDigits = Math.abs(num).toString().length;  
+    if (numDigits === 1) return 1;
+    if (numDigits === 2) return 2;
+    if (numDigits === 3) return 3;
+    return 4; 
+  });
 };
