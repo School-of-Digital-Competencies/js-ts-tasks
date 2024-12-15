@@ -1,0 +1,30 @@
+[
+  {
+    "fnArguments": [{ "X": 1, "Y": 1 }, "x"],
+    "expected": false
+  },
+  {
+    "fnArguments": [{ "X": 10, "property": 10 }, "property"],
+    "expected": true
+  },
+  {
+    "fnArguments": [{ "X": 0, "Y": 0 }, "nothing"],
+    "expected": false
+  },
+  {
+    "fnArguments": [{ "key": "value" }, "key"],
+    "expected": true
+  },
+  {
+    "fnArguments": [{ "key": "value" }, "kEy"],
+    "expected": false
+  },
+  {
+    "fnArguments": [{ "key": "value" }, "toString"],
+    "expected": true
+  },
+  {
+    "fnArguments": [{ "key": "value" }, "__proto__"],
+    "expected": true
+  }
+]

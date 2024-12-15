@@ -1,0 +1,30 @@
+[
+  {
+    "fnArguments": [{ "X": 1, "Y": 1 }, { "X": 2, "Y": 2 }],
+    "expected": 1.41
+  },
+  {
+    "fnArguments": [{ "X": 10, "Y": 10 }, { "X": 20, "Y": 20 }],
+    "expected": 14.14
+  },
+  {
+    "fnArguments": [{ "X": 0, "Y": 0 }, { "X": 5, "Y": 5 }],
+    "expected": 7.07
+  },
+  {
+    "fnArguments": [{ "X": -42, "Y": 12 }, { "X": 41, "Y": 41 }],
+    "expected": 87.92
+  },
+  {
+    "fnArguments": [{ "X": -42, "Y": -42 }, { "X": -42, "Y": -42 }],
+    "expected": 0
+  },
+  {
+    "fnArguments": [{ "X": 0.1, "Y": 0.2 }, { "X": -0.4, "Y": -0.12 }],
+    "expected": 0.59
+  },
+  {
+    "fnArguments": [{ "X": 100, "Y": 55.55 }, { "X": 250, "Y": -155.12 }],
+    "expected": 258.62
+  }
+]

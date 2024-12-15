@@ -7,10 +7,22 @@
     "prepare": "husky install ./.husky",
     "test": "npm run test:junit",
     "test:local": "mocha test",
+<<<<<<< HEAD
     "test:local:formatAddress": "mocha test -g 'formatAddress'",
     "test:local:formatAddressWithOrder": "mocha test -g 'formatAddressWithOrder'",
     "test:local:censorship": "mocha test -g 'censorship'",
     "test:local:primeNumbers": "mocha test -g 'primeNumbers'",
+=======
+    "test:local:getDistance": "mocha test -g 'getDistance'",
+    "test:local:hasProperty": "mocha test -g 'hasProperty'",
+    "test:local:getMaximalSequence": "mocha test -g 'getMaximalSequence'",
+    "test:local:removeItems": "mocha test -g 'removeItems'",
+    "test:local:partialSum": "mocha test -g 'partialSum'",
+    "test:local:hundredAfterOdd": "mocha test -g 'hundredAfterOdd'",
+    "test:local:diffElems": "mocha test -g 'diffElems'",
+    "test:local:maxCommonSub": "mocha test -g 'maxCommonSub'",
+    "test:local:replacement": "mocha test -g 'replacement'",
+>>>>>>> hometasks-02-objects-arrays
     "test:nyan": "mocha test --reporter nyan",
     "test:report": "cross-env MOCHA_FILE=reports/report.xml mocha test --reporter mocha-xunit-reporter",
     "test:junit": "cross-env MOCHA_FILE=junit.xml mocha test --reporter mocha-junit-reporter",

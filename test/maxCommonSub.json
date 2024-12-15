@@ -1,0 +1,30 @@
+[
+  {
+    "fnArguments": ["xavgabcdefmokd", "hkotogabcdefl"],
+    "expected": "gabcdef"
+  },
+  {
+    "fnArguments": ["abcure", "bctabchhhhhhh"],
+    "expected": "abc"
+  },
+  {
+    "fnArguments": ["qwe", "e"],
+    "expected": "e"
+  },
+  {
+    "fnArguments": ["q", "eq"],
+    "expected": "q"
+  },
+  {
+    "fnArguments": ["asdfghjkl", "asdfghjkl"],
+    "expected": "asdfghjkl"
+  },
+  {
+    "fnArguments": ["645936544444", "sdafbdf44444f0k349"],
+    "expected": "44444"
+  },
+  {
+    "fnArguments": ["qwerzxcvtyuiopbnm", "twerzxcvtyuiopbnmqwerzxcvgyuiopbnmqwerzxcvtyuiopbnm"],
+    "expected": "qwerzxcvtyuiopbnm"
+  }
+]

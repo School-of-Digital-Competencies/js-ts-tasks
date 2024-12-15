@@ -1,0 +1,34 @@
+[
+  {
+    "fnArguments": [[1, 3, 456, 78, 2, 2, 4], 2],
+    "expected": [1, 3, 456, 78, 4]
+  },
+  {
+    "fnArguments": [[1, 3, 456, 78, 2, 2, 4], "hello"],
+    "expected": [1, 3, 456, 78, 2, 2, 4]
+  },
+  {
+    "fnArguments": [["a", "b", "c", "d", "e"], "c"],
+    "expected": ["a", "b", "d", "e"]
+  },
+  {
+    "fnArguments": [[34, 23, "Some long name"], { "name": "Some long name" }],
+    "expected": [34, 23, "Some long name"]
+  },
+  {
+    "fnArguments": [[34, 23, "Some long name", { "name": "Some long name" }], { "name": "Some long name" }],
+    "expected": [34, 23, "Some long name"]
+  },
+  {
+    "fnArguments": [[true, false, true, true, true], true],
+    "expected": [false]
+  },
+  {
+    "fnArguments": [[{ "a": 1, "b": true }, { "a": 2, "b": false }, { "a": 1, "b": false }, { "a": 1, "b": false }], { "a": 1, "b": false }],
+    "expected": [{ "a": 1, "b": true }, { "a": 2, "b": false }]
+  },
+  {
+    "fnArguments": [[[0], [0, 1], [0, 1, 2], [0, 1]], [0, 1]],
+    "expected": [[0], [0, 1, 2]]
+  }
+]
