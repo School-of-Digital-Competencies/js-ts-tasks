@@ -9,5 +9,17 @@
  * @returns {function}
  */
 module.exports.sort = function sort(TestUtils) {
-  throw new Error('Not implemented'); // remove this line and create your solution
+  return function(...args) {
+    return args.sort(TestUtils.sortComparator);
+}
+const TestUtils = {
+  sortComparator: (a, b) => {
+      if (typeof a === 'number' && typeof b === 'number') {
+          return b - a;
+        } else if (typeof a === 'string' && typeof b === 'string') {
+          return b.localeCompare(a);
+        }
+        return 0;
+    }
+  }  
 };
