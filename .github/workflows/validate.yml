@@ -1,0 +1,50 @@
+name: Check tests
+
+on:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  check-upstream-src-changes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Add upstream repository
+        run: |
+          git remote add upstream https://github.com/School-of-Digital-Competencies/js-ts-tasks
+          git fetch upstream
+
+      - name: Compare changes with upstream
+        id: check_files
+        run: |
+          CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+          echo "Current branch: $CURRENT_BRANCH"
+          
+          if ! git ls-remote --exit-code --heads upstream $CURRENT_BRANCH; then
+            echo "Branch $CURRENT_BRANCH does not exist in upstream."
+            exit 1
+          fi
+          
+          CHANGED_FILES=$(git diff --name-only upstream/$CURRENT_BRANCH HEAD)
+          
+          echo "Changed files: $CHANGED_FILES"
+          
+          INVALID_CHANGES=$(echo "$CHANGED_FILES" | grep -v -E '^src/' || true)
+          echo "Invalid changed files: $INVALID_CHANGES"
+          
+          if [ -n "$INVALID_CHANGES" ]; then
+            echo "Detected invalid changes outside 'src/' or '.github/' folders."
+            echo "Invalid changes: $INVALID_CHANGES"
+            exit 1
+          fi
+
+      - name: Install dependencies and run tests
+        if: steps.check_files.outcome == 'success'
+        run: |
+          npm install
+          npm run test:local

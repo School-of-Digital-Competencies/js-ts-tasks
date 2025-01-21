@@ -32,7 +32,7 @@ you can get your public key by run in terminal `cat ~/.ssh/id_rsa.pub`
 
 ### Cloning your forked repository with tasks into your local machine
 
-1. Navigate to your forker repository and click on blue button `Clone`
+1. Navigate to your forker repository and click on green button `Clone`
 2. In dropdown find section **Clone with SSH** and copy that url git@github:...git
 3. In console on your machine navigate to any folder you like and paste copied url after git clone: `git clone git@github...tasks.git`
 4. Type in yes if console asks you about fingerprint
@@ -131,14 +131,19 @@ Sometimes there are improvements in already published tasks. To get new changes 
 
 For example, let's assume there are some updated in `upstream/hometasks-simple-tasks` branch. Run in console `git pull upstream hometasks-simple-tasks` to pull recent changes from remote branch into your local repository.
 
+## Step before starting working on tasks
+
+1. You need to execute the command npm install in the console. (1 time step)
+
 ## How to run tasks locally
 
 1. Switch to the tasks branch you would like to solve
 2. Each task has its own instructions in README.md
+3. to run test localy you need to execute the proper command in the console e.g. npm run test:local:digitSum
 
 ## How to submit solution to Moodle
 
 1. Develop a solution
-2. Commit your solution
+2. Commit your solution. You need to follow the next commit message pattern: `feat: {commit message}` or `fix: {commit message}` e.g. `feat: solved task 1` or `fix: fixed comments` for task 3
 3. _Push your solution to your forked repository_
 4. Submit a link to the branch with solution in your forked repository to the moodle
