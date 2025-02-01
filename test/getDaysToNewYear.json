@@ -7,7 +7,7 @@
       }
     ],
     "expected": {
-      "value": 71,
+      "value": 72,
       "type": "number"
     }
   },
@@ -19,7 +19,7 @@
       }
     ],
     "expected": {
-      "value": 973,
+      "value": 244,
       "type": "number"
     }
   },

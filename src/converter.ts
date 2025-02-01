@@ -1,10 +1,29 @@
-/**
- * Write a function converting temperature, weight and distance. Precision is 2 number after digits
- * @param {string | number} value
- * @param {'m'|'mi'|'gr'|'pound'|'C'|'K'} from
- * @param {'m'|'mi'|'gr'|'pound'|'C'|'K'} to
- * @returns {number}
- */
-module.exports.converter = function (value: number, from: string, to: string): number {
-  throw new Error('Not implemented'); // delete this line and write your code
-};
+type Unit = 'm' | 'mi' | 'gr' | 'pound' | 'C' | 'K';
+
+export function converter(value: number | string, from: Unit, to: Unit): number {
+  const numericValue = Number(value);
+  if (isNaN(numericValue)) {
+    throw new Error('Invalid value');
+  }
+  const conversionRates: { [key in Unit]?: { [key in Unit]?: number | ((v: number) => number) } } = {
+    'm': { 'm': 1, 'mi': 0.000621371 },
+    'mi': { 'mi': 1, 'm': 1609.34 },
+    'gr': { 'gr': 1, 'pound': 0.00220462 },
+    'pound': { 'pound': 1, 'gr': 453.592 },
+    'C': { 'C': 1, 'K': (v: number) => v + 273.15 },
+    'K': { 'K': 1, 'C': (v: number) => v - 273.15 },
+  };
+
+  if (!conversionRates[from] || !conversionRates[to]) {
+    throw new Error('Unsupported unit');
+  }
+
+  let result: number;
+  if (typeof conversionRates[from][to] === 'function') {
+    result = (conversionRates[from][to] as (v: number) => number)(numericValue);
+  } else {
+    result = numericValue * (conversionRates[from][to] as number);
+  }
+
+  return parseFloat(result.toFixed(2));
+}
