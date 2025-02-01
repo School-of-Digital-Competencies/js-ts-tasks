@@ -4,5 +4,13 @@
  * @returns {number}
  */
 module.exports.getDaysToNewYear = function getDaysToNewYear(targetDate: Date | string): number {
-  throw new Error('Not implemented'); // delete this line and write your code
+  if (typeof targetDate === 'string') {
+    let parts = targetDate.split('.');
+    targetDate = new Date(Number(parts[2]), Number(parts[1]) - 1, Number(parts[0]));
+  }
+  let finalNewYear = new Date(2024, 0, 1);
+  let timeDifference = finalNewYear.getTime() - (targetDate as Date).getTime();
+  let daysLeft = timeDifference / (1000 * 60 * 60 * 24);
+
+  return Math.round(daysLeft);
 };

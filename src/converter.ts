@@ -6,5 +6,17 @@
  * @returns {boolean}
  */
 module.exports.converter = function (value: number, from: string, to: string): number {
-  throw new Error('Not implemented'); // delete this line and write your code
+  let num = Number(value);
+  if (isNaN(num)) return NaN;
+
+  if (from === 'C' && to === 'K') return +(num + 273.15).toFixed(2);
+  if (from === 'K' && to === 'C') return +(num - 273.15).toFixed(2);
+
+  if (from === 'gr' && to === 'pound') return +(num / 453.592).toFixed(2);
+  if (from === 'pound' && to === 'gr') return +(num * 453.592).toFixed(2);
+
+  if (from === 'm' && to === 'mi') return +(num / 1609.34).toFixed(2);
+  if (from === 'mi' && to === 'm') return +(num * 1609.34).toFixed(2);
+
+  return NaN;
 };
