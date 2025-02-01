@@ -7,7 +7,7 @@
       }
     ],
     "expected": {
-      "value": "NaN",
+      "value": 71,
       "type": "number"
     }
   },
