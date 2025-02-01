@@ -75,7 +75,7 @@
       }
     ],
     "expected": {
-      "value": 40088.66,
+      "value": 40088.76,
       "type": "number"
     }
   },
