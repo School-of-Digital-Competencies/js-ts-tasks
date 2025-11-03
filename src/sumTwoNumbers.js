@@ -5,7 +5,6 @@
  * @returns {number}
  */
 module.exports.sumTwoNumbers = function sumTwoNumbers(firstNumber, secondNumber) {
-  const num1 = Number(firstNumber);
-  const num2 = Number(secondNumber);
-  return num1 + num2;
+  const clean = str => Number(str.toString().replace(/\s+/g, '')); 
+  return clean(firstNumber) + clean(secondNumber);
 };
