@@ -4,5 +4,13 @@
  * @returns {number}
  */
 module.exports.digitsSum = function digitsSum(n) {
-  throw new Error('Not implemented'); // remove this line
+  n = Math.abs(n);
+  let sum = 0;
+  const str = n.toString();
+
+  for (let i = 0; i < str.length; i++) {
+    sum += Number(str[i]);
+  }
+
+  return sum;
 };
