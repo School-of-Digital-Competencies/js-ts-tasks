@@ -5,5 +5,20 @@
  * @returns {number}
  */
 module.exports.sumInRange = function sumInRange(start, end) {
-  throw new Error('Not implemented');
+  start = Number(start);
+  end = Number(end);
+
+  let sum = 0;
+
+  if (start <= end) {
+    for (let i = start; i <= end; i++) {
+      sum += i;
+    }
+  } else {
+    for (let i = start; i >= end; i--) {
+      sum += i;
+    }
+  }
+
+  return sum;
 };
