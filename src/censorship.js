@@ -14,5 +14,17 @@
  * @returns {function}
  */
 module.exports.censorship = function censorship(forbidden) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  // Сортируем слова по длине, чтобы длинные заменялись раньше коротких
+  forbidden = [...forbidden].sort((a, b) => b.length - a.length);
+
+  // взращаем функции аргумент text и в ей длаем цыкл for
+  return function (text) {
+    for (const word of forbidden) {
+      // Экранируем спецсимволы для RegExp
+      const safeWord = word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const re = new RegExp(safeWord, 'g');
+      text = text.replace(re, '*'.repeat(word.length));
+    }
+    return text;
+  };
 };
