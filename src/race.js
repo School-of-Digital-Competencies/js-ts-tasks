@@ -4,5 +4,19 @@
  * @returns Promise
  */
 module.exports.race = function race(promisesArray) {
-  throw new Error('Not implemented'); // remove me and write your code
+  return new Promise((resolve, reject) => {
+    if (promisesArray.length === 0) {
+      return;
+    }
+
+    promisesArray.forEach(promise => {
+      Promise.resolve(promise)
+        .then(value => {
+          resolve(value);
+        })
+        .catch(error => {
+          reject(error);
+        });
+    });
+  });
 };
